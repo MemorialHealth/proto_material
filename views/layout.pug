@@ -8,6 +8,25 @@ html
             .clear {
                 clear:both;
             }
+            .layout-nav li
+            {
+                float:left;
+                clear:both;
+                line-height:40px;
+            }
+            .layout-nav li a
+            {
+                color:#696969;
+            }
+
+            .layout-nav li i
+            {
+                float: left;
+                line-height: 40px;
+                margin: 0 32px 0 0;
+                width: 24px;
+                color:#696969;
+            }
     body
         nav.light-blue.lighten-1(role="navigation")
             div.nav-wrapper.container
@@ -41,10 +60,68 @@ html
 
                 a.button-collapse(href="#", data-activates="nav-mobile")
                     i.material-icons menu
-        h1 YES!!
+        
+        div
+            div.row
+                div.col.s2.hide-on-med-and-down
+                    ul.layout-nav
+                        li
+                            a(href="#") Find Doctor
+                                i.material-icons person_pin
+                        li
+                            a(href="#") Services
+                                i.material-icons work
+                        li
+                            a(href="#") Locations
+                                i.material-icons location_on
+                        li
+                            a(href="#") ER Times
+                                i.material-icons alarm_on
+                        li
+                            a(href="#") Contact
+                                i.material-icons phone
+                        li
+                            a(href="#") Company
+                                i.material-icons business
+                        li
+                            a(href="#") Give
+                                i.material-icons.red-text.lighten-1 loyalty
+
+                div.col.l9.s12
+                    div.carousel.carousel-slider.center(data-indicators="true")
+                        div.carousel-item.red.white-text(href="#one!")
+                            h2 First Panel
+                            p.white-text Our First panel goes here
+                        div.carousel-item.amber.white-text(href="#two!")
+                            h2 Second Panel
+                            p.white-text Our Second panel goes here
+                        div.carousel-item.green.white-text(href="#three!")
+                            h2 Third Panel
+                            p.white-text Our Third panel goes here
+                        div.carousel-item.blue.white-text(href="#four!")
+                            h2 Fourth Panel
+                            p.white-text Our Fourth panel goes here
+
+                    div.col.s6.m4
+                        div.card.small
+                            div.card-image.waves-effect.waves-block.waves-light
+                                img(src="http://i.huffpost.com/gen/1796280/images/o-MIGRAINE-SILENT-STROKE-facebook.jpg")
+                                span.card-title Spokes Fighting Strokes
+                            div.card-content
+                                i.activator.material-icons.right(style="cursor:pointer;") more_vert
+                                p Memorial Health System (MHS) invites you to come recognize...
+                                p
+                                    a(href="#") MORE
+                            div.card-reveal
+                                span.card-title.grey-text.text-darken-4 Spokes Fighting Strokes
+                                    i.material-icons.right close
+                                p.right 9/13/2016
+                                p Memorial Health System (MHS) invites you to come recognize National Rehabilitation Week (September 18-24th) and hear stroke survivor and cross country adaptive cyclist Dan Zimmerman who will be at Selby General Hospital.
+
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
         script(src="js/materialize/materialize.min.js")
         script.
             $(document).ready(function(){
                 $('.button-collapse').sideNav();
+                $('.carousel.carousel-slider').carousel({full_width: true});
             });
