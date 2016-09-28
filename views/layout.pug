@@ -13,7 +13,13 @@ html
                 float:left;
                 clear:both;
                 line-height:40px;
+                width:100%;
             }
+            .layout-nav li:hover
+            {
+                background-color: whitesmoke;
+            }
+            
             .layout-nav li a
             {
                 color:#696969;
@@ -33,6 +39,24 @@ html
                 overflow:hidden;
             }
 
+            ul.list-inline li
+            {
+                display:inline-block;
+                padding:0 5px;
+            }
+            ul.secondary-nav
+            {
+                padding-bottom: 5px;
+            }
+            ul.secondary-nav li
+            {
+                padding: 0 10px;
+            }
+            ul.secondary-nav li.active
+            {
+                border-bottom: 2px solid white;
+            }
+
             @media only screen and (min-width: 601px)
             {
                  .story-box
@@ -47,11 +71,15 @@ html
                     max-height:250px;
                 }
             }
+
+            .bg-blue{
+                background-color:#29b6f6;
+            }
            
     body
         nav.light-blue.lighten-1(role="navigation")
             div.nav-wrapper.container
-                a.brand-logo(id="logo-container", href="#") Memorial Health
+                a.brand-logo(id="logo-container", href="/") Memorial Health
                 ul.right
                     li
                         a(href="#")
@@ -81,7 +109,8 @@ html
 
                 a.button-collapse(href="#", data-activates="nav-mobile")
                     i.material-icons menu
-        
+        block subheader
+
         div
             div.row
                 div.col.s2.hide-on-med-and-down
@@ -102,219 +131,14 @@ html
                             a(href="#") Contact
                                 i.material-icons phone
                         li
-                            a(href="#") Company
+                            a(href="company") Company
                                 i.material-icons business
                         li
                             a(href="#") Give
                                 i.material-icons.red-text.lighten-1 loyalty
 
                 div.col.l9.s12
-                    div.carousel.carousel-slider.center(data-indicators="true")
-                        div.carousel-item.red.white-text(href="#one!")
-                            h2 First Panel
-                            p.white-text Our First panel goes here
-                        div.carousel-item.amber.white-text(href="#two!")
-                            h2 Second Panel
-                            p.white-text Our Second panel goes here
-                        div.carousel-item.green.white-text(href="#three!")
-                            h2 Third Panel
-                            p.white-text Our Third panel goes here
-                        div.carousel-item.blue.white-text(href="#four!")
-                            h2 Fourth Panel
-                            p.white-text Our Fourth panel goes here
-
-                    div.row
-                        div.col.s12.m6.l4
-                            div.card.small
-                                div.card-image.waves-effect.waves-block.waves-light
-                                    img(src="http://i.huffpost.com/gen/1796280/images/o-MIGRAINE-SILENT-STROKE-facebook.jpg")
-                                    span.card-title Spokes Fighting Strokes
-                                div.card-content
-                                    i.activator.material-icons.right(style="cursor:pointer;") more_vert
-                                    p Memorial Health System (MHS) invites you to come recognize...
-                                    p
-                                        a(href="#") MORE
-                                div.card-reveal
-                                    span.card-title.grey-text.text-darken-4 Spokes Fighting Strokes
-                                        i.material-icons.right close
-                                    p.right 9/13/2016
-                                    p Memorial Health System (MHS) invites you to come recognize National Rehabilitation Week (September 18-24th) and hear stroke survivor and cross country adaptive cyclist Dan Zimmerman who will be at Selby General Hospital.
-                                    
-                        div.col.s12.m6.l4
-                            div.card.small
-                                div.card-image.waves-effect.waves-block.waves-light
-                                    img(src="http://rcmissioncorps.org/wp-content/uploads/2015/09/bigstock-Support-Give-Donate-Concep-83851868.jpg")
-                                    span.card-title Bounty by the River
-                                div.card-content
-                                    i.activator.material-icons.right(style="cursor:pointer;") more_vert
-                                    p Hunger Solutions and its members invite you to attend a fundraising 
-                                    p
-                                        a(href="#") MORE
-                                div.card-reveal
-                                    span.card-title.grey-text.text-darken-4 Bounty by the River
-                                        i.material-icons.right close
-                                    p.right 8/19/2016
-                                    p Hunger Solutions and its members invite you to attend a fundraising dinner, Bounty by the River, in Marietta’s beautiful East Muskingum Park on Saturday, September 17 at 6:30 p.m. Tickets are first come, first serve at $100 each. This will includes a gourmet meal created by Master Chef Emad Al-Masri of The Buckley House. There will be a bar accepting credit cards and live music by Vinnie and the Lubricators. All of the proceeds from this event will go directly to supporting local food pantries to eliminate hunger and teach children basic nutrition and cooking skills in Washington County.
-                        
-                        div.col.s12.m6.l4
-                            div.card.small
-                                div.card-image.waves-effect.waves-block.waves-light
-                                    img(src="http://www.humphriesav.co.uk/wp-content/uploads/2012/01/roy_castle_awards-71-1024x681.jpg")
-                                    span.card-title SGH Award
-                                div.card-content
-                                    i.activator.material-icons.right(style="cursor:pointer;") more_vert
-                                    p Selby General Hospital of Memorial Health System was awarded accreditation from the Healthcare Facilities Accreditation Program (HFAP) 
-                                    p
-                                        a(href="#") MORE
-                                div.card-reveal
-                                    span.card-title.grey-text.text-darken-4 SGH Award
-                                        i.material-icons.right close
-                                    p.right 8/5/2016
-                                    p Selby General Hospital of Memorial Health System was awarded accreditation from the Healthcare Facilities Accreditation Program (HFAP), an independent accreditation organization recognized by the Centers for Medicare and Medicaid Services (CMS). After the HFAP team conducted an extensive and objective review of the quality and safety Standards of Selby General Hospital, they earned the accreditation.
-
-                    br
-
-                    div.row.hide-on-small-only
-                        h2.blue-text.lighten-3 Stories
-
-                        div.row.story-box
-                            div.col.s12.m4(style="padding:.1em;")
-                                img.responsive-img(src="http://www.mhsystem.org/upload/images/Emergency%20Medicine%20Residency/groupemergency1.jpg")
-                            div.col.s12.m2(style="padding:.1em;")
-                                img.responsive-img(src="http://www.mhsystem.org/upload/images/imam2.jpg", style="margin-bottom:4px")
-                                img.responsive-img(src="http://www.mhsystem.org/upload/images/imam2.jpg")
-                            div.col.s12.m6(style="padding:.1em;")
-                                img.responsive-img(src="http://www.mhsystem.org/upload/images/responsive/hyperbaric_photo.JPG")
-
-                    br
-                    br
-
-                    div.row.purple.lighten-2
-                        div.col.l6.m5.s12
-                            h4.white-text Foundation
-                            div.hide-on-small-only(style="height:100px; text-align:center;")
-                                img.responsive-img(src="https://www.svgimages.com/svg-image/s6/plant-with-pot-icon.svg", style="height:100%; filter: grayscale(100%) brightness(120);")
-                            
-                        div.col.l6.m7.s12.no-pad
-                            div.card(style="margin:0;")
-                                i.material-icons.right loyalty
-                                br
-                                div.card-content The Memorial Health System is a community owned health system that strives to build healthier families in our region. The Memorial Health Foundation uses the donations from people like you to financially support the education of our employees and our community, help with renovation expenses and areas of greatest need in the Memorial Health System.
-                                div.card-action
-                                    a(href="#") EXPLORE
-                    
-                    br
-                    br
-
-                    div.row.pink.lighten-2
-                        div.col.s12.hide-on-med-and-up
-                            h4.white-text Volunteer
-                        div.col.l6.m7.s12.no-pad
-                            div.card(style="margin:0;")
-                                div.card-content The Memorial Health System is a community owned health system that strives to build healthier families in our region. The Memorial Health Foundation uses the donations from people like you to financially support the education of our employees and our community, help with renovation expenses and areas of greatest need in the Memorial Health System.
-                                div.card-action
-                                    a(href="#") EXPLORE
-                        div.col.l6.m5.s12.hide-on-small-only
-                            h4.white-text Volunteer
-                            div(style="height:100px; text-align:center;")
-                                img.responsive-img(src="http://info.cotribute.com/hubfs/Volunteer.png?noresize&t=1473370878577", style="height:100%; filter: grayscale(100%) brightness(120);")
-
-                    div.row
-                        div.col.s12.m6.l4
-                            div.card.small
-                                div.card-image.waves-effect.waves-block.waves-light
-                                    img(src="https://tccancer.org/cancer-center/wp-content/uploads/2011/02/patientcare.jpg")
-                                    span.card-title Patient Care
-                                div.card-content
-                                    i.activator.material-icons.right(style="cursor:pointer;") more_vert
-                                    ul
-                                        li 
-                                            a(href="#") Volunteer
-                                        li 
-                                            a(href="#") Foundation
-                                        li 
-                                            a(href="#") Join the Team
-                                    
-                                div.card-reveal
-                                    span.card-title.grey-text.text-darken-4 Patient Care
-                                        i.material-icons.right close
-                                    ul
-                                        li 
-                                            a(href="#") Volunteer
-                                        li 
-                                            a(href="#") Foundation
-                                        li 
-                                            a(href="#") Join the Team
-                                        li 
-                                            a(href="#") Work Hard
-                                        li 
-                                            a(href="#") Play Hard
-                                        li 
-                                            a(href="#") Write Software
-                        
-                        div.col.s12.m6.l4
-                            div.card.small
-                                div.card-image.waves-effect.waves-block.waves-light
-                                    img(src="http://www.pickeringusa.com/wp-content/uploads/2013/10/Marietta-Memorial-Hospital-Uniterruptable-Power-Supply-System-Additions-800x357.jpg")
-                                    span.card-title Company
-                                div.card-content
-                                    i.activator.material-icons.right(style="cursor:pointer;") more_vert
-                                    ul
-                                        li 
-                                            a(href="#") Careers
-                                        li 
-                                            a(href="#") MyMemorial
-                                        li 
-                                            a(href="#") Training
-
-                                div.card-reveal
-                                    span.card-title.grey-text.text-darken-4 Company
-                                        i.material-icons.right close
-                                    ul
-                                        li 
-                                            a(href="#") Careers
-                                        li 
-                                            a(href="#") MyMemorial
-                                        li 
-                                            a(href="#") Training
-                                        li 
-                                            a(href="#") Intranet
-                                        li 
-                                            a(href="#") Internet
-                                        li 
-                                            a(href="#") Skynet
-
-                        div.col.s12.m6.l4
-                            div.card.small
-                                div.card-image.waves-effect.waves-block.waves-lig
-                                    img(src="http://media2.intoday.in/indiatoday/images/stories/help--fraynachoblascko-storyfb_647_121515035219.jpg")
-                                    span.card-title How To Help
-                                div.card-content
-                                    i.activator.material-icons.right(style="cursor:pointer;") more_vert
-                                    ul
-                                        li 
-                                            a(href="#") Volunteer
-                                        li 
-                                            a(href="#") Foundation
-                                        li 
-                                            a(href="#") Join the Team
-
-                                div.card-reveal
-                                    span.card-title.grey-text.text-darken-4 How To Help
-                                        i.material-icons.right close
-                                    ul
-                                        li 
-                                            a(href="#") Volunteer
-                                        li 
-                                            a(href="#") Foundation
-                                        li 
-                                            a(href="#") Join the Team
-                                        li 
-                                            a(href="#") Be Nice
-                                        li 
-                                            a(href="#") Be Kind
-                                        li 
-                                            a(href="#") Be Humble
+                    block content
 
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
         script(src="js/materialize/materialize.min.js")

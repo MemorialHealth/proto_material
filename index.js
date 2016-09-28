@@ -10,7 +10,15 @@ app.set('view engine', 'pug');
 app.set('views', './views');
 
 app.get('/', function(req, res){
-    res.render('layout', { title: 'Material Design' });
+    res.render('main', { title: 'Material Design' });
+});
+
+app.get('/company', function(req, res){
+    res.render('company', { title: 'Meet Us'});
+});
+
+app.get('/careers', function(req, res){
+    res.render('careers', { title: 'Join Us'});
 });
 
 app.listen(port, function(){
