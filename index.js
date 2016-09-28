@@ -21,6 +21,10 @@ app.get('/careers', function(req, res){
     res.render('careers', { title: 'Join Us'});
 });
 
+app.get('/doctors', function(req, res){
+    res.render('doctors', { title: 'Find A Doctor' });
+});
+
 app.listen(port, function(){
     console.log('Memorial Material listening on port ' + port);
 });

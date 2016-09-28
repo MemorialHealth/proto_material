@@ -1,0 +1,147 @@
+//- You like pretty screens? Then this layout is necessary
+extends layout.pug
+
+block content
+    div.row
+        form.col.s12
+            p
+                input(type="radio", name="findBy", id="speciality", checked)
+                label(for="speciality") Speciality
+            p
+                input(type="radio", name="findBy", id="doctor")
+                label(for="doctor") Doctor
+
+            div.input-field.col.s4
+                
+                select
+                    option(value="", disabled, selected) Choose Option..
+                    option(value="All") All
+                    option(value="Acupuncture") Acupuncture
+                    option(value="Adult Medicine") Adult Medicine
+                    option(value="Allergy") Allergy
+                    option(value="Allergy and Asthma") Allergy and Asthma
+                    option(value="Anesthesia") Anesthesia
+                    option(value="Audiology") Audiology
+                    option(value="Cardiology") Cardiology
+                    option(value="Cosmetic Surgery") Cosmetic Surgery
+                    option(value="da Vinci Surgery") da Vinci Surgery
+                    option(value="Dermatology") Dermatology
+                    option(value="Emergency Medicine") Emergency Medicine
+                    option(value="Family Medicine") Family Medicine
+                    option(value="Gastroenterology") Gastroenterology
+                    option(value="General Surgery") General Surgery
+                    option(value="Genetic Counseling") Genetic Counseling
+                    option(value="Gynecology") Gynecology
+                    option(value="Health Psychology") Health Psychology
+                    option(value="Hematology and Oncology") Hematology and Oncology
+                    option(value="Hospitalist") Hospitalist
+                    option(value="Internal Medicine") Internal Medicine
+                    option(value="Massage Therapy") Massage Therapy
+                    option(value="Neurology") Neurology
+                    option(value="Neurosurgery") Neurosurgery
+                    option(value="Obstetrics") Obstetrics
+                    option(value="Occupational Therapy") Occupational Therapy
+                    option(value="Ophthalmology") Ophthalmology
+                    option(value="Oral Surgery") Oral Surgery
+                    option(value="Orthopaedic Surgery") Orthopaedic Surgery
+                    option(value="Otolaryngology") Otolaryngology
+                    option(value="Pathology") Pathology
+                    option(value="Pediatric Cardiology") Pediatric Cardiology
+                    option(value="Pediatrics") Pediatrics
+                    option(value="Physical Therapy") Physical Therapy
+                    option(value="Podiatry") Podiatry
+                    option(value="Psychiatry") Psychiatry
+                    option(value="Radiology") Radiology
+                    option(value="Respiratory") Respiratory
+                    option(value="Speech Therapy") Speech Therapy
+                    option(value="Sports Medicine") Sports Medicine
+                    option(value="Urology") Urology
+                label Speciality
+            
+            div.input-field.col.s3
+                select
+                    option(value="", disabled, selected) Location
+                    option(value="Belpre") Belpre
+                    option(value="Marietta") Marietta
+                    option(value="Selby") Selby
+                label Facility
+            
+            div.input-field.col.s3
+                select
+                    option(value="", disabled, selected) Insurance
+                    option(value="All") All
+                    option(value="MedBen") MedBen
+                    option(value="CheapStuff") CheapStuff
+                    option(value="Obamacare") Obamacare
+                label Insurance
+
+        div.row
+            div.col.s12.m9
+                ul.collection
+                    li.collection-item.avatar
+                        img.circle(src="http://images.fineartamerica.com/images/artworkimages/mediumlarge/1/minimal-captain-america-manny-jasus.jpg", alt="")
+                        span.title.point.blue-text Aaron Freeland
+                        p Doctor of Doom
+                        a.secondary-content(href="#")
+                            i.material-icons grade
+                        div.doctor-detail.hide
+                            br
+
+                            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil tempora assumenda ipsum dolores suscipit totam quia error unde, ullam placeat. Numquam eius necessitatibus nobis, officiis aut unde sequi asperiores dolor consectetur ipsum tenetur facilis quis ad. Error ex, quaerat amet ducimus. Reprehenderit itaque soluta eius voluptatibus omnis veritatis veniam voluptas illum, vero placeat culpa eveniet laudantium nihil maxime facere dicta natus quo. Repellendus, vero, dolorum. Nihil sint sed quo doloribus! Non, laboriosam. Pariatur, dolorem, iusto. Quae consectetur explicabo quo, voluptatem soluta accusantium ipsa ea! Id dicta quibusdam, odio molestiae rem sint sunt illo repellat libero ducimus culpa in velit ut inventore ad omnis, repudiandae fugit dolor suscipit! Nobis, aperiam itaque, quia, incidunt dolorum, beatae dolorem dignissimos sunt quibusdam accusantium quasi aspernatur harum commodi repudiandae? Libero aliquam, optio perspiciatis ut temporibus enim sunt dolores unde perferendis itaque hic, officiis? Illum magnam laborum deleniti quae, ut ex. Repudiandae tempore quas pariatur doloribus exercitationem, sed at ipsam. Optio sint impedit autem voluptatem animi qui, temporibus sed laudantium, officiis maxime provident natus repellendus repellat vel quas dolorem mollitia earum quidem itaque ratione voluptate nostrum! Cumque cum voluptatem, dicta et praesentium. Voluptates dolorum incidunt, alias amet esse fuga, dolores natus, hic quia illo fugiat harum!
+
+                            br
+                            br 
+
+                            div.divider
+
+                            div.row
+                                div.right
+                                    a.waves-effect.waves-teal.btn-flat.close-detail CLOSE
+                                    a.waves-effect.waves-teal.btn-flat(target="_new", href="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&q=memorial+health+system+marietta+oh&rflfq=1&rlha=0&rllag=39399546,-81428643,4708&tbm=lcl&tbs=lf:1,lf_ui:4,lf_pqs:EAE") MAP IT
+
+                            span.clearfix
+
+
+                    li.collection-item.avatar
+                        img.circle(src="http://www.orangeinks.com/wp-content/uploads/2011/08/spiderman-minimalist-fan-art.png", alt="")
+                        span.title.point.blue-text Shaun Knapp
+                        p Nap Specialist
+                        a.secondary-content(href="#")
+                            i.material-icons grade
+                        div.doctor-detail.hide
+                            br
+
+                            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil tempora assumenda ipsum dolores suscipit totam quia error unde, ullam placeat. Numquam eius necessitatibus nobis, officiis aut unde sequi asperiores dolor consectetur ipsum tenetur facilis quis ad. Error ex, quaerat amet ducimus. Reprehenderit itaque soluta eius voluptatibus omnis veritatis veniam voluptas illum, vero placeat culpa eveniet laudantium nihil maxime facere dicta natus quo. Repellendus, vero, dolorum. Nihil sint sed quo doloribus! Non, laboriosam. Pariatur, dolorem, iusto. Quae consectetur explicabo quo, voluptatem soluta accusantium ipsa ea! Id dicta quibusdam, odio molestiae rem sint sunt illo repellat libero ducimus culpa in velit ut inventore ad omnis, repudiandae fugit dolor suscipit! Nobis, aperiam itaque, quia, incidunt dolorum, beatae dolorem dignissimos sunt quibusdam accusantium quasi aspernatur harum commodi repudiandae? Libero aliquam, optio perspiciatis ut temporibus enim sunt dolores unde perferendis itaque hic, officiis? Illum magnam laborum deleniti quae, ut ex. Repudiandae tempore quas pariatur doloribus exercitationem, sed at ipsam. Optio sint impedit autem voluptatem animi qui, temporibus sed laudantium, officiis maxime provident natus repellendus repellat vel quas dolorem mollitia earum quidem itaque ratione voluptate nostrum! Cumque cum voluptatem, dicta et praesentium. Voluptates dolorum incidunt, alias amet esse fuga, dolores natus, hic quia illo fugiat harum!
+
+                            br
+                            br 
+
+                            div.divider
+
+                            div.row
+                                div.right
+                                    a.waves-effect.waves-teal.btn-flat.close-detail CLOSE
+                                    a.waves-effect.waves-teal.btn-flat(target="_new", href="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&q=memorial+health+system+marietta+oh&rflfq=1&rlha=0&rllag=39399546,-81428643,4708&tbm=lcl&tbs=lf:1,lf_ui:4,lf_pqs:EAE") MAP IT
+
+                            span.clearfix
+                    
+
+            div.col.m3.hide-on-small-only
+                form.s12
+                    p Gender
+                    p
+                        input(type="radio", name="gender", id="Male", checked)
+                        label(for="Male") Male
+                    p
+                        input(type="radio", name="gender", id="Female")
+                        label(for="Female") Female
+
+block scr
+    script.
+        $('select').material_select();
+        $('.collection-item .title').on('click', function(){
+            $(this).siblings('.doctor-detail').toggleClass('hide');
+        });
+        $('.close-detail').on('click', function(){
+            $(this).parents('.doctor-detail').addClass('hide');
+        });

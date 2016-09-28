@@ -8,6 +8,7 @@ html
             .clear {
                 clear:both;
             }
+            .point { cursor: pointer; }
             .layout-nav li
             {
                 float:left;
@@ -86,7 +87,7 @@ html
                             i.material-icons perm_phone_msg
                 ul.side-nav#nav-mobile(style="transform: translateX(-100%);")
                     li.clear
-                        a(href="#") Find Doctor
+                        a(href="doctors") Find Doctor
                             i.material-icons person_pin
                     li.clear
                         a(href="#") Services
@@ -116,7 +117,7 @@ html
                 div.col.s2.hide-on-med-and-down
                     ul.layout-nav
                         li
-                            a(href="#") Find Doctor
+                            a(href="doctors") Find Doctor
                                 i.material-icons person_pin
                         li
                             a(href="#") Services
@@ -147,3 +148,5 @@ html
                 $('.button-collapse').sideNav();
                 $('.carousel.carousel-slider').carousel({full_width: true});
             });
+        
+        block scr
