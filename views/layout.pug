@@ -9,6 +9,35 @@ html
                 clear:both;
             }
             .point { cursor: pointer; }
+            nav .brand-logo
+            {
+                padding: 0 15px;
+            }
+            nav .nav-search-wrapper
+            {
+                position: absolute;
+                width: 50%;
+                left: 0;
+                right: 0;
+                top:7px;
+                margin: 0 auto;
+                background-color:#41c4ff;
+                height: 40px;
+                line-height: 40px;
+                z-index: 9999;
+            }
+            nav .nav-search-wrapper input.nav-search
+            {
+                margin:0;
+                
+            }
+            nav .nav-search-wrapper i
+            {
+                height: 40px;
+                line-height: 40px;
+            }
+
+
             .layout-nav li
             {
                 float:left;
@@ -76,11 +105,32 @@ html
             .bg-blue{
                 background-color:#29b6f6;
             }
+            #search-modal
+            {
+                z-index:1003;
+                display:block;
+                opacity:1;
+                transform: scaleX(1);
+                top:10%;
+                color:white;
+                box-shadow: none;
+                background-color:transparent;
+            }
+            #search-overlay
+            {
+                z-index:1002;
+                display:block;
+                opacity:0.8;
+            }
            
     body
         nav.light-blue.lighten-1(role="navigation")
-            div.nav-wrapper.container
+            div.nav-wrapper
                 a.brand-logo(id="logo-container", href="/") Memorial Health
+                div#mainSearch.nav-search-wrapper.hide-on-med-and-down.input-field
+                    i.material-icons.prefix search
+                    input#siteSearch.nav-search.browser-default(type="search", placeholder="Search")
+
                 ul.right
                     li
                         a(href="#")
@@ -141,12 +191,26 @@ html
                 div.col.l9.s12
                     block content
 
+        #search-modal.modal.hide
+            .modal-content
+                h4 Results
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quae repellat officia, debitis sapiente alias tempora natus, nam quia laborum.
+        #search-overlay.lean-overlay.hide
+
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
         script(src="js/materialize/materialize.min.js")
         script.
             $(document).ready(function(){
                 $('.button-collapse').sideNav();
                 $('.carousel.carousel-slider').carousel({full_width: true});
+
+                $('#siteSearch').on('focus', function(e){
+                    $('#search-modal,#search-overlay').removeClass('hide');
+                });
+                
+                $('#siteSearch').on('blur', function(e){
+                    $('#search-modal,#search-overlay').addClass('hide');
+                });
             });
         
         block scr
